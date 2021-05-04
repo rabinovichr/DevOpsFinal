@@ -1,5 +1,5 @@
 import os
-# import dotenv
+import dotenv
 from django.shortcuts import render
 import finnhub
 
