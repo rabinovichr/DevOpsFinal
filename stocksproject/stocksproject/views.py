@@ -11,52 +11,41 @@ def stocks_view(request):
     api_key = os.getenv('c1s391aad3i8lrmfh4o0')
 
     finnhub_client = finnhub.Client(api_key=api_key)
-    
+
     aapl = finnhub_client.quote('AAPL')
-    context = {'aapl': aapl}
-    return render(request, "index.html", context)
 
 
-    aapl = finnhub_client.quote('TSLA')
-    context = {'tsla': aapl}
-    return render(request, "index.html", context)
+
+    tsla = finnhub_client.quote('TSLA')
 
 
-    aapl = finnhub_client.quote('AMZN')
-    context = {'amzn': aapl}
-    return render(request, "index.html", context)
+
+    amzn = finnhub_client.quote('AMZN')
 
 
-    aapl = finnhub_client.quote('GME')
-    context = {'gme': aapl}
-    return render(request, "index.html", context)
+
+    gme = finnhub_client.quote('GME')
 
 
-    aapl = finnhub_client.quote('MSFT')
-    context = {'msft': aapl}
-    return render(request, "index.html", context)
+
+    msft = finnhub_client.quote('MSFT')
 
 
-    aapl = finnhub_client.quote('SBUX')
-    context = {'sbux': aapl}
-    return render(request, "index.html", context)
+    sbux = finnhub_client.quote('SBUX')
 
 
-    aapl = finnhub_client.quote('AMC')
-    context = {'amc': aapl}
-    return render(request, "index.html", context)
+
+    amc = finnhub_client.quote('AMC')
 
 
-    aapl = finnhub_client.quote('NFLX')
-    context = {'nflx': aapl}
-    return render(request, "index.html", context)
+    nflx = finnhub_client.quote('NFLX')
 
 
-    aapl = finnhub_client.quote('BA')
-    context = {'ba': aapl}
-    return render(request, "index.html", context)
+
+    ba = finnhub_client.quote('BA')
+    
 
 
-    aapl = finnhub_client.quote('PRTY')
-    context = {'prty': aapl}
-    return render(request, "index.html", context)
+    prty = finnhub_client.quote('PRTY')
+
+    return render(request, "index.html", {'aapl': aapl,'tsla': tsla, 'amzn': amzn, 'gme': gme, 'msft': msft,'sbux': sbux, 'amc': amc, 'nflx': nflx, 'ba': ba, 'prty': prty})
