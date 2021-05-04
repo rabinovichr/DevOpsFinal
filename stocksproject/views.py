@@ -1,10 +1,11 @@
 import os
-import dotenv
+from dotenv import load_dotenv
 from django.shortcuts import render
 import finnhub
 
+load_dotenv()
+
 def stocks_view(request):
-    load_dotenv()
     api_key = os.getenv('API_KEY')
 
     finnhub_client = finnhub.Client(api_key=api_key)
