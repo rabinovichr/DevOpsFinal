@@ -5,6 +5,8 @@
 This is a very simple django website that displays 10 chosen stocks. This project uses the [Finnhub API](https://finnhub.io) to get the current prices for each stock. [Live View](https://lit-sea-51914.herokuapp.com/)
 
 ## Diagram
+![Screenshot](screenshot/diagram.png)
+
 ## Setup
 
 In order to run this project, you need a [Finnhub](https://finnhub.io) API key.
